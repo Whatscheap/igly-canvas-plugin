@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "igly-canvas",
+  "version": "0.1.0",
+  "description": "Draw flowcharts, mind maps, roadmaps, wireframes, storyboards, moodboards and template-based designs on an editable Igly canvas, right in the chat.",
+  "author": { "name": "Igly", "email": "support@igly.ai", "url": "https://igly.ai" },
+  "homepage": "https://igly.ai/mcp",
+  "repository": "https://github.com/Whatscheap/igly-canvas-plugin",
+  "license": "MIT",
+  "keywords": ["whiteboard", "diagram", "flowchart", "mind-map", "wireframe", "storyboard", "moodboard", "templates", "canvas"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Igly Canvas",
+        "shortDescription": "Draw diagrams, boards and layouts on an editable canvas.",
+        "longDescription": "Ask for a flowchart, mind map, roadmap, kanban or retro board, wireframe, storyboard, moodboard or a poster from one of thousands of templates. The board appears in the chat, you can move and edit everything by hand, export a PNG, and open it in the full Igly editor.",
+        "developerName": "Igly",
+        "category": "Design",
+        "capabilities": ["Interactive", "Write"],
+        "websiteURL": "https://igly.ai/mcp",
+        "privacyPolicyURL": "https://igly.ai/legal/privacy",
+        "termsOfServiceURL": "https://igly.ai/legal/terms",
+        "defaultPrompt": [
+          "Draw a flowchart of our customer onboarding",
+          "Make a mind map for a podcast launch",
+          "Turn this plan into a Q1 to Q4 roadmap",
+          "Sketch a wireframe for a pricing page"
+        ],
+        "brandColor": "#6C7FFF",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}
