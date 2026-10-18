@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.1.0",
-  "description": "Draw flowcharts, mind maps, roadmaps, wireframes, storyboards, moodboards and template-based designs on an editable Igly canvas, right in the chat.",
+  "version": "0.2.0",
+  "description": "Pick from 2,400+ free design templates or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
     "email": "support@igly.ai",
@@ -12,6 +12,10 @@
   "repository": "https://github.com/Whatscheap/igly-canvas-plugin",
   "license": "MIT",
   "keywords": [
+    "templates",
+    "design-templates",
+    "poster",
+    "menu",
     "whiteboard",
     "diagram",
     "flowchart",
@@ -19,15 +23,14 @@
     "wireframe",
     "storyboard",
     "moodboard",
-    "templates",
     "canvas"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Igly Canvas",
-        "shortDescription": "Diagrams and boards in chat",
-        "longDescription": "Ask for a flowchart, mind map, roadmap, kanban or retro board, wireframe, storyboard, moodboard or a poster from one of thousands of templates. The board appears in the chat, you can move and edit everything by hand, export a PNG, and open it in the full Igly editor.",
+        "shortDescription": "Free templates and diagrams",
+        "longDescription": "Pick a free design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Edit everything by hand, export a PNG, and open it in the full Igly editor. No account needed.",
         "developerName": "Igly",
         "category": "Design",
         "capabilities": [
@@ -39,9 +42,9 @@
         "privacyPolicyURL": "https://igly.ai/legal/privacy",
         "termsOfServiceURL": "https://igly.ai/legal/terms",
         "defaultPrompt": [
-          "Draw a flowchart of our customer onboarding",
-          "Make a mind map for a podcast launch",
-          "Sketch a wireframe for a pricing page"
+          "Show me cafe menu templates",
+          "Make an Instagram post for my bakery from a template",
+          "Draw a flowchart of our customer onboarding"
         ],
         "brandColor": "#6C7FFF",
         "composerIcon": "./assets/icon.png",
