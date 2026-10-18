@@ -1,12 +1,12 @@
 # Igly Canvas plugin
 
-Draw on an editable [Igly](https://igly.ai) canvas from Claude, ChatGPT and Codex: flowcharts, mind maps, roadmaps, kanban and retro boards, wireframes, storyboards, moodboards, and posters or social posts built from thousands of designed templates.
+Pick from 2,400+ free design templates or draw on an editable [Igly](https://igly.ai) canvas from Claude, ChatGPT and Codex: menus, posters and social posts from templates, plus flowcharts, mind maps, roadmaps, kanban and retro boards, wireframes, storyboards and moodboards.
 
 The board shows up right in the chat. Move, retype and draw on it by hand, export a PNG, or open it in the full Igly editor. Free, no account needed to draw.
 
 ## What's inside
 
-- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, no sign-in) with tools to create a canvas, list templates, add / update / remove elements, arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
+- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, no sign-in) with tools to browse templates (with a picker in the chat), create a canvas, apply a template beside an existing board, add / update / remove elements, arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
 - **Skills** in `skills/`:
 
 | Skill | Use it for |
