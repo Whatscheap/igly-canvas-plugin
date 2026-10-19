@@ -21,7 +21,7 @@ description: Draw a roadmap, timeline, release plan, project schedule, quarterly
 - Milestones: `shape: "star"` 90 x 90 at the column edge, with a short `type: "text"` caption below.
 - Optional "today" marker: `type: "line"` from (x, -60) to (x, bottom), `stroke: "#E03131"`, `stroke_width: 4`, `dashed: true`.
 - Tentative or stretch items: `dashed: true` on the bar so they read as not committed.
-- Dependencies between bars in different lanes: `type: "arrow"` with `from_id`/`to_id` and a small `bend` (about 60) so it clears other bars.
+- Dependencies between bars in different lanes: `type: "arrow"` with `from_id`/`to_id` and `curve` toward the side with space so it clears other bars.
 - For a single-track timeline of events, use one horizontal `type: "arrow"` from (0, 0) to (end, 0), small `ellipse` dots on it and alternating sticky notes above and below.
 
 ## 4. Check

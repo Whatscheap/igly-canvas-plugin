@@ -25,7 +25,7 @@ Draw the whole chart in one `add_elements` call, then check and fix it.
 ## 4. Connect
 - `type: "arrow"` with `from_id` / `to_id`. Arrows attach to the facing edges and follow boxes when they move.
 - Label decision branches with the arrow `label` ("Yes" / "No").
-- Loops and back-edges (retry, "go back to step 1"): give the arrow a `bend` (canvas units, e.g. 120) so it curves around the boxes instead of crossing them. Positive bows to the left of from→to; for an arrow going right to left along a row, a positive bend bows below it.
+- Loops and back-edges (retry, "go back to step 1"): connect with `from_id`/`to_id` and add `curve` ("down", "up", "left" or "right") toward the side with empty space, usually away from the title and other rows ("down" for a loop back under a row). It curves around the boxes instead of crossing them.
 - Optional or future steps: `dashed: true` on the box and on its arrow.
 - Never draw arrows by coordinates between boxes; always use ids.
 
@@ -52,6 +52,6 @@ Draw the whole chart in one `add_elements` call, then check and fix it.
  {"type":"arrow","id":"a2","from_id":"verify","to_id":"ok"},
  {"type":"arrow","id":"a3","from_id":"ok","to_id":"done","label":"Yes"},
  {"type":"arrow","id":"a4","from_id":"ok","to_id":"resend","label":"No"},
- {"type":"arrow","id":"a5","from_id":"resend","to_id":"verify","bend":80}
+ {"type":"arrow","id":"a5","from_id":"resend","to_id":"verify","curve":"down"}
 ]}
 ```

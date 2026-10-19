@@ -18,8 +18,8 @@ description: Draw a mind map, brainstorm, topic cluster or idea map on an editab
 - Leaves of a branch: `type: "sticky"`, 170 x 120, placed 320 beyond their branch along the same angle, fanned 35 degrees apart around it (for 3 leaves: -35, 0, +35). Leaves of neighbouring branches must not touch; with 6 branches keep 3 leaves or fewer each, or increase the branch distance to 500.
 - Give each branch its own `fill`, and its leaves the matching sticky `color` (branch / leaf):
   `#DBEAFE` / `#BFDBFE`, `#FCE7F3` / `#FBCFE8`, `#DCFCE7` / `#BBF7D0`, `#FEF3C7` / `#FDE68A`, `#EDE9FE` / `#DDD6FE`, `#FFE4E6` / `#FECDD3`.
-- Connect center to branch and branch to leaf with `type: "line"` and `from_id`/`to_id` (lines read calmer than arrows here). A light `bend` (30 to 60, alternating sign per side) gives organic, hand-drawn branches.
-- Cross-links between ideas on different branches: a `dashed: true` line with a `bend` so it arcs around the map.
+- Connect center to branch and branch to leaf with `type: "line"` and `from_id`/`to_id` (lines read calmer than arrows here). A light `bend` (30 to 60) gives organic, hand-drawn branches.
+- Cross-links between ideas on different branches: a `dashed: true` line with `curve` toward the outside of the map so it arcs around it.
 
 ## 4. Check
 - `get_canvas_summary`; move overlapping leaves outward with `update_elements` (`dx`, `dy`).
