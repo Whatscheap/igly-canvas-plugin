@@ -6,7 +6,7 @@ The board shows up right in the chat. Move, retype and draw on it by hand, expor
 
 ## What's inside
 
-- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, no sign-in) with tools to browse templates (with a picker in the chat), create a canvas, apply a template beside an existing board, add / update / remove elements, arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
+- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, no sign-in) with tools to browse templates (with a picker in the chat), create a canvas, apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
 - **Skills** in `skills/`:
 
 | Skill | Use it for |
