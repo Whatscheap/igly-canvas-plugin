@@ -19,7 +19,9 @@ description: Draw a roadmap, timeline, release plan, project schedule, quarterly
 - Items: `type: "sticky"`, 280 x 180, placed in their period column and lane, x = 210 + i * 320, y = 50 + lane * 260 (stack a second item in the same cell 200 lower and grow the lane).
 - One sticky `color` per lane: `#BFDBFE`, `#FBCFE8`, `#BBF7D0`, `#FDE68A`, `#DDD6FE`.
 - Milestones: `shape: "star"` 90 x 90 at the column edge, with a short `type: "text"` caption below.
-- Optional "today" marker: `type: "line"` from (x, -60) to (x, bottom), `stroke: "#E03131"`, `stroke_width: 4`.
+- Optional "today" marker: `type: "line"` from (x, -60) to (x, bottom), `stroke: "#E03131"`, `stroke_width: 4`, `dashed: true`.
+- Tentative or stretch items: `dashed: true` on the bar so they read as not committed.
+- Dependencies between bars in different lanes: `type: "arrow"` with `from_id`/`to_id` and a small `bend` (about 60) so it clears other bars.
 - For a single-track timeline of events, use one horizontal `type: "arrow"` from (0, 0) to (end, 0), small `ellipse` dots on it and alternating sticky notes above and below.
 
 ## 4. Check
