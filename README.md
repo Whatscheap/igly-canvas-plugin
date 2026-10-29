@@ -2,11 +2,11 @@
 
 Pick from 2,400+ free design templates or draw on an editable [Igly](https://igly.ai) canvas from Claude, ChatGPT and Codex: menus, posters and social posts from templates, plus flowcharts, mind maps, roadmaps, kanban and retro boards, wireframes, storyboards and moodboards.
 
-The board shows up right in the chat. Move, retype and draw on it by hand, export a PNG, or open it in the full Igly editor. Free, no account needed to draw.
+The board shows up right in the chat. Move, retype and draw on it by hand, export a PNG, or open it in the full Igly editor. Free with an Igly account: you sign in once when you add the connector.
 
 ## What's inside
 
-- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, no sign-in) with tools to browse templates (with a picker in the chat), create a canvas, apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
+- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, OAuth sign-in with your Igly account) with tools to browse templates (with a picker in the chat), create a canvas, apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
 - **Skills** in `skills/`:
 
 | Skill | Use it for |
