@@ -4,7 +4,16 @@
     "igly-canvas": {
       "type": "streamable-http",
       "url": "https://igly.ai/api/mcp",
-      "extensions": { "com.openai": { "auth": { "type": "none" } } }
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            }
+          }
+        }
+      }
     }
   }
 }
