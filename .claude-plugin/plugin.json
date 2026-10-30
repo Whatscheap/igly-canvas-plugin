@@ -1,8 +1,8 @@
 {
   "name": "igly-canvas",
   "displayName": "Igly Canvas",
-  "version": "0.3.1",
-  "description": "Pick from 2,400+ free design templates or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
+  "version": "0.3.2",
+  "description": "Pick from 2,400+ free design templates and 870+ animations, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
     "email": "support@igly.ai",
@@ -14,6 +14,8 @@
   "keywords": [
     "templates",
     "design-templates",
+    "animation",
+    "motion-graphics",
     "poster",
     "menu",
     "whiteboard",
