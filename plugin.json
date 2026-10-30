@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.3.1",
-  "description": "Pick from 2,400+ free design templates or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
+  "version": "0.3.2",
+  "description": "Pick from 2,400+ free design templates and 870+ animations, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
     "email": "support@igly.ai",
@@ -14,6 +14,8 @@
   "keywords": [
     "templates",
     "design-templates",
+    "animation",
+    "motion-graphics",
     "poster",
     "menu",
     "whiteboard",
@@ -30,7 +32,7 @@
       "interface": {
         "displayName": "Igly Canvas",
         "shortDescription": "Free templates and diagrams",
-        "longDescription": "Pick a free design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Edit everything by hand, export a PNG, and open it in the full Igly editor. Free with an Igly account.",
+        "longDescription": "Pick a free design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, browse 870+ animations and get your own version built in the chat, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Edit everything by hand, export a PNG, and open it in the full Igly editor. Free with an Igly account.",
         "developerName": "Igly",
         "category": "Design",
         "capabilities": [
@@ -42,8 +44,8 @@
         "privacyPolicyURL": "https://igly.ai/legal/privacy",
         "termsOfServiceURL": "https://igly.ai/legal/terms",
         "defaultPrompt": [
-          "Show me cafe menu templates",
-          "Make an Instagram post for my bakery from a template",
+          "What does Igly have? Show me around.",
+          "Show me logo reveal animations",
           "Draw a flowchart of our customer onboarding"
         ],
         "brandColor": "#6C7FFF",
