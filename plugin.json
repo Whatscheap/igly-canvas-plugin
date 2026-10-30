@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Pick from 2,400+ design templates and 870+ animations, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
@@ -58,47 +58,31 @@
             {
               "description": "Open the library from a general request",
               "prompt": "What does Igly have? Show me around.",
-              "tools_triggered": [
-                "browse_igly"
-              ],
+              "tools_triggered": "browse_igly",
               "expected_behavior": "A library picker opens with a Templates / Animations switch and category filters. The user can switch sections, filter and pick."
             },
             {
               "description": "Rewrite a template for a brand",
               "prompt": "Use an Igly Canvas template to make an Instagram post for our bakery Crumb and Co announcing a summer menu with lemon tarts.",
-              "tools_triggered": [
-                "list_templates",
-                "create_canvas",
-                "get_canvas_summary",
-                "update_elements"
-              ],
+              "tools_triggered": "list_templates, create_canvas, get_canvas_summary, update_elements",
               "expected_behavior": "A copy of a designed template with the headline, brand name and copy rewritten. The board view shows the post."
             },
             {
               "description": "Draw a flowchart",
               "prompt": "Use Igly Canvas to draw a flowchart of a refund request: customer asks, support checks the plan, decision if within 14 days, approve or deny, notify the customer. If denied, loop back to the customer with a curved arrow; draw an optional \"offer credit\" step dashed.",
-              "tools_triggered": [
-                "create_canvas",
-                "add_elements"
-              ],
+              "tools_triggered": "create_canvas, add_elements",
               "expected_behavior": "A new board with rounded boxes, a diamond decision, arrows with Yes/No labels, a curved loop-back arrow and a dashed optional step. The editable board view appears in the response."
             },
             {
               "description": "Arrange a board and export it",
               "prompt": "On that Igly Canvas board, align the step boxes, space them evenly, then export a PNG.",
-              "tools_triggered": [
-                "arrange",
-                "export_png"
-              ],
+              "tools_triggered": "arrange, export_png",
               "expected_behavior": "Boxes aligned and evenly spaced, with connected arrows following. A PNG link of the board is returned."
             },
             {
               "description": "Browse animations and build one",
               "prompt": "Show me logo reveal animations in Igly Canvas, then make the first one for my brand Lumen.",
-              "tools_triggered": [
-                "list_animations",
-                "get_animation"
-              ],
+              "tools_triggered": "list_animations, get_animation",
               "expected_behavior": "A picker with animation previews playing on hover. The assistant then builds that animation as a self-contained HTML file with the name Lumen, shown as a playable preview in the chat."
             }
           ],
@@ -118,7 +102,8 @@
           ]
         },
         "demo_recording_url": "https://img.igly.ai/cms-media/landing/pages/mcp/2026-10-v1/igly-canvas-chatgpt-templates-demo-v3.mp4",
-        "commerce": false
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
         "release_notes": "First release: design templates, animations and an editable whiteboard in the chat."
