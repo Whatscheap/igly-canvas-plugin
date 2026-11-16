@@ -1,12 +1,12 @@
 # Igly Canvas plugin
 
-Pick from 2,400+ free design templates and 870+ animations, or draw on an editable [Igly](https://igly.ai) canvas from Claude, ChatGPT and Codex: menus, posters and social posts from templates, animations you can make your own, plus flowcharts, mind maps, roadmaps, kanban and retro boards, wireframes, storyboards and moodboards.
+Pick from 5,000+ free design templates, 1,100+ animations and video templates that render to a free MP4, or draw on an editable [Igly](https://igly.ai) canvas from Claude, ChatGPT and Codex: menus, posters and social posts from templates, launch videos and logo intros as MP4s, animations you can make your own, plus flowcharts, mind maps, roadmaps, kanban and retro boards, wireframes, storyboards and moodboards.
 
 The board shows up right in the chat. Move, retype and draw on it by hand, export a PNG, or open it in the full Igly editor. Free with an Igly account: you sign in once when you add the connector.
 
 ## What's inside
 
-- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, OAuth sign-in with your Igly account) with tools to browse the Igly library (templates and animations in one picker in the chat, with categories), get an animation prompt, create a canvas, apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
+- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, OAuth sign-in with your Igly account) with tools to browse the Igly library (design templates, video templates and animations in one picker in the chat, with categories), fill in and render a video template to an MP4, get an animation prompt, create a canvas, apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
 - **Skills** in `skills/`:
 
 | Skill | Use it for |
@@ -19,6 +19,7 @@ The board shows up right in the chat. Move, retype and draw on it by hand, expor
 | `storyboard` | video, ad and slide storyboards |
 | `moodboard` | style directions, palettes, type pairings |
 | `template-design` | posters, social posts, menus, invitations from templates |
+| `video-template` | launch videos, promos, logo intros and slideshows rendered to an MP4 |
 | `animation` | logo reveals, launch films, kinetic type and other animations built in the chat |
 
 ## Install
@@ -43,6 +44,7 @@ claude plugin install igly-canvas@igly
 - "Turn these notes into a Q1 to Q4 roadmap"
 - "Sketch a wireframe for a pricing page"
 - "Make an Instagram post for our bakery's summer menu from a template"
+- "Make a launch video for my app Lumen from a video template"
 
 ## Privacy
 

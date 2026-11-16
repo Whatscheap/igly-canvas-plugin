@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.3.5",
-  "description": "Pick from 2,400+ design templates and 870+ animations, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
+  "version": "0.4.0",
+  "description": "Pick from 5,000+ design templates, 1,100+ animations and video templates that render to an MP4, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
     "email": "support@igly.ai",
@@ -15,6 +15,8 @@
     "templates",
     "design-templates",
     "animation",
+    "mp4",
+    "video-templates",
     "motion-graphics",
     "poster",
     "menu",
@@ -32,7 +34,7 @@
       "interface": {
         "displayName": "Igly Canvas",
         "shortDescription": "Design templates and diagrams",
-        "longDescription": "Pick a design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, browse 870+ animations and get your own version built in the chat, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Edit everything by hand, export a PNG, and open it in the full Igly editor. Sign in with your Igly account.",
+        "longDescription": "Pick a design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, fill in a video template (launch videos, promos, logo intros) and get a 1080p MP4 rendered in the chat, browse 1,100+ animations and get your own version built in the chat, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Edit everything by hand, export a PNG, and open it in the full Igly editor. Sign in with your Igly account.",
         "developerName": "Igly",
         "category": "Creativity",
         "capabilities": [
@@ -45,7 +47,7 @@
         "termsOfServiceURL": "https://igly.ai/legal/terms",
         "defaultPrompt": [
           "What does Igly have? Show me around.",
-          "Show me logo reveal animations",
+          "Make a launch video for my app with an Igly video template",
           "Draw a flowchart of our customer onboarding"
         ],
         "brandColor": "#6C7FFF",
@@ -59,7 +61,13 @@
               "description": "Open the library from a general request",
               "prompt": "What does Igly have? Show me around.",
               "tools_triggered": "browse_igly",
-              "expected_behavior": "A library picker opens with a Templates / Animations switch and category filters. The user can switch sections, filter and pick."
+              "expected_behavior": "A library picker opens with a Templates / Videos / Animations switch and category filters. The user can switch sections, filter and pick."
+            },
+            {
+              "description": "Render a video template to an MP4",
+              "prompt": "Use an Igly Canvas video template to make a product launch video for my desk lamp Lumen: tagline \"Light that follows your day\", features sunrise wake-up, auto warm at night and one-tap scenes.",
+              "tools_triggered": "list_video_templates, get_video_template, render_video_template, get_video_render",
+              "expected_behavior": "A video template is picked and filled with Lumen's name, tagline and features (no sample brand left). The board view shows the render's progress, then plays the 1080p MP4 with a Download button; get_video_render returns the MP4 link."
             },
             {
               "description": "Rewrite a template for a brand",
@@ -106,7 +114,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "First release: design templates, animations and an editable whiteboard in the chat."
+        "release_notes": "Video templates: pick a launch video, promo or logo intro in the library, fill in your text, colors and logo, and get a 1080p MP4 rendered in the chat."
       }
     }
   }
