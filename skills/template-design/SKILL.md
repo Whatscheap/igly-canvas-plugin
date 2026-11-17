@@ -15,7 +15,7 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - Otherwise offer 2 or 3 options in one short line each, or pick the best fit if the user asked you to choose.
 
 ## 2. Create from the template
-- New board: `create_canvas` with `template_id` and a `title`. Keep `canvas_id`.
+- New board: `create_canvas` with `template_id` and a `title`. Keep `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 - Board already open: `apply_template` with `canvas_id` and `template_id`. The template lands to the right of the existing content as a new page, so nothing is covered.
 
 ## 3. Rewrite the copy

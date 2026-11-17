@@ -9,7 +9,7 @@ description: Build a moodboard, style direction, brand board, color palette, typ
 From the brief, decide: 3 to 5 keywords (e.g. "calm, earthy, premium"), a 5-color palette with hex codes, a heading/body font pairing, and 3 to 6 content ideas. Explain choices in a sentence each.
 
 ## 2. Create
-`create_canvas` with the direction name as `title`. Keep `canvas_id`.
+`create_canvas` with the direction name as `title`. Keep `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 
 ## 3. Layout (one `add_elements` call)
 - Title at (0, -160): `type: "text"`, `font_size: 64`, bold, in the heading font.

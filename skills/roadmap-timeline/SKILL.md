@@ -10,7 +10,7 @@ description: Draw a roadmap, timeline, release plan, project schedule, quarterly
 - Group items into 2 to 5 lanes (teams, themes or workstreams) when there are more than 8 items.
 
 ## 2. Create
-`create_canvas` with a `title` such as "2027 product roadmap". Keep `canvas_id`.
+`create_canvas` with a `title` such as "2027 product roadmap". Keep `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 
 ## 3. Layout (one `add_elements` call)
 - Title text at (0, -140), `font_size: 48`, bold.

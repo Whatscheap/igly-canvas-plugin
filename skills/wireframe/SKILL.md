@@ -12,7 +12,7 @@ Low fidelity: grey boxes, real labels, no images. Use the clean font so it reads
 - List the sections top to bottom (nav, hero, features, pricing, FAQ, footer...) or the screen regions (sidebar, header, cards, table).
 
 ## 2. Create
-`create_canvas` with `title` (e.g. "Pricing page wireframe") and, for a single screen, `width`/`height` of the frame. Keep `canvas_id`.
+`create_canvas` with `title` (e.g. "Pricing page wireframe") and, for a single screen, `width`/`height` of the frame. Keep `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 
 ## 3. Elements (one `add_elements` call; set `font_family: "Inter"` on everything)
 - Frame: rectangle at (0, 0), frame size, `fill: "#FFFFFF"`, `stroke: "#1E1E1E"`, `stroke_width: 2`, `corner_radius: 0` (mobile: 40).

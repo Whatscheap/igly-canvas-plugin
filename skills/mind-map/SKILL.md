@@ -9,7 +9,7 @@ description: Draw a mind map, brainstorm, topic cluster or idea map on an editab
 - One central topic, 4 to 6 main branches, 2 to 4 leaves per branch. Keep labels to 1 to 5 words.
 
 ## 2. Create
-`create_canvas` with the topic as `title`. Keep `canvas_id`.
+`create_canvas` with the topic as `title`. Keep `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 
 ## 3. Radial layout (one `add_elements` call)
 - Center: `shape: "ellipse"`, 320 x 160 at (0, 0), bold, `font_size: 28`.

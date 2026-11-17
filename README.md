@@ -2,11 +2,11 @@
 
 Pick from 5,000+ free design templates, 1,100+ animations and video templates that render to a free MP4, or draw on an editable [Igly](https://igly.ai) canvas from Claude, ChatGPT and Codex: menus, posters and social posts from templates, launch videos and logo intros as MP4s, animations you can make your own, plus flowcharts, mind maps, roadmaps, kanban and retro boards, wireframes, storyboards and moodboards.
 
-The board shows up right in the chat. Move, retype and draw on it by hand, export a PNG, or open it in the full Igly editor. Free with an Igly account: you sign in once when you add the connector.
+The board shows up right in the chat. Move, retype and draw on it by hand, export a PNG, or open it in the full Igly editor. Every board is a project in your Igly account, so you can paste a project link later and keep editing it from the chat. Free with an Igly account: you sign in once when you add the connector.
 
 ## What's inside
 
-- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, OAuth sign-in with your Igly account) with tools to browse the Igly library (design templates, video templates and animations in one picker in the chat, with categories), fill in and render a video template to an MP4, get an animation prompt, create a canvas, apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
+- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, OAuth sign-in with your Igly account) with tools to browse the Igly library (design templates, video templates and animations in one picker in the chat, with categories), fill in and render a video template to an MP4, get an animation prompt, list your Igly projects, create a canvas (saved as a project in your account), apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
 - **Skills** in `skills/`:
 
 | Skill | Use it for |
@@ -48,7 +48,7 @@ claude plugin install igly-canvas@igly
 
 ## Privacy
 
-Boards are stored without an account for 30 days and are reachable only through their unguessable link. See [igly.ai/legal/privacy](https://igly.ai/legal/privacy).
+Boards are projects in your own Igly account, visible only to you. See [igly.ai/legal/privacy](https://igly.ai/legal/privacy).
 
 ## License
 

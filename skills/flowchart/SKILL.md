@@ -13,7 +13,7 @@ Draw the whole chart in one `add_elements` call, then check and fix it.
 - Mark decisions (yes/no questions), start and end.
 
 ## 2. Create the board
-`create_canvas` with a short `title` (e.g. "Customer onboarding"). Keep the returned `canvas_id`.
+`create_canvas` with a short `title` (e.g. "Customer onboarding"). Keep the returned `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 
 ## 3. Lay out on a grid
 - Box: 240 x 110. Column step 320 (left to right) or row step 190 (top to bottom).

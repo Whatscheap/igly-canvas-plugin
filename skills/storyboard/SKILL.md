@@ -12,7 +12,7 @@ Frames are sketch boxes with scene descriptions, not finished pictures. Draw sim
 - Choose the frame ratio from the format: 9:16 vertical (reels, TikTok, shorts) 270 x 480; 16:9 (YouTube, slides) 480 x 270; 1:1 (feed) 360 x 360.
 
 ## 2. Create
-`create_canvas` with the project as `title`. Keep `canvas_id`.
+`create_canvas` with the project as `title`. Keep `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 
 ## 3. Layout (one `add_elements` call)
 - Grid of 4 per row (3 for 16:9). Column step = frame width + 60; row step = frame height + 260.
