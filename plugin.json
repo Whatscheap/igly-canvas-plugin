@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Pick from 5,000+ design templates, 1,100+ animations and video templates that render to an MP4, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
@@ -82,6 +82,12 @@
               "expected_behavior": "The headline and body text change font in place (no new elements); the text boxes refit the new font. The board view shows the new fonts, and get_canvas_summary lists font=\"Playfair Display\" and font=\"Inter\" for those ids."
             },
             {
+              "description": "Swap a template photo, duplicate an element and rename the project",
+              "prompt": "On that Igly Canvas board, replace the main photo with https://img.igly.ai/cms-media/repo-media/apps/web/public/images/marketing/canvas-agent/coffee-ugc-vertical.webp, duplicate the headline so I have a second line below it, and rename the project to Crumb and Co summer menu.",
+              "tools_triggered": "get_canvas_summary, update_elements, duplicate_elements, update_canvas",
+              "expected_behavior": "The template's photo shows the coffee picture in the same box, a copy of the headline appears below the original (duplicate_elements with a dy), and the project is renamed. get_canvas_summary shows the new title and the copy's id; nothing else on the board moved."
+            },
+            {
               "description": "Draw a flowchart",
               "prompt": "Use Igly Canvas to draw a flowchart of a refund request: customer asks, support checks the plan, decision if within 14 days, approve or deny, notify the customer. If denied, loop back to the customer with a curved arrow; draw an optional \"offer credit\" step dashed.",
               "tools_triggered": "create_canvas, add_elements",
@@ -126,7 +132,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Video templates: pick a launch video, promo or logo intro in the library, fill in your text, colors and logo, and get a 1080p MP4 rendered in the chat."
+        "release_notes": "Swap a template photo for your own from a link, add images, duplicate elements and groups, rename a project or change its page size, and read big boards page by page. Edits that change nothing no longer save a new version."
       }
     }
   }

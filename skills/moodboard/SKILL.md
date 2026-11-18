@@ -23,4 +23,5 @@ From the brief, decide: 3 to 5 keywords (e.g. "calm, earthy, premium"), a 5-colo
 ## 4. Variants and finish
 - For 2 or 3 directions, repeat the block side by side (x offset 1800) with its own title so the user can compare.
 - `get_canvas_summary` to check, `arrange` to tidy, `export_png` to share.
-- If the user wants real photos or brand assets, they can add them in the full editor through `open_url`.
+- Real photos or brand assets with a public link: `add_elements` `type: "image"` with `image_url` (PNG, JPEG or WebP); give a `width` and the height keeps the picture's shape. Files without a link: Add image in the board view, or the full editor through `open_url`. Igly Canvas does not generate images.
+- `duplicate_elements` repeats a tile or a palette swatch; `update_canvas` renames the board.

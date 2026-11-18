@@ -19,14 +19,17 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - Board already open: `apply_template` with `canvas_id` and `template_id`. The template lands to the right of the existing content as a new page, so nothing is covered.
 
 ## 3. Rewrite the copy
-- `get_canvas_summary` to see the template's text elements, their ids and fonts. The list shortens long text: before rewriting a paragraph, call it again with `element_ids` for the full text and every style.
+- `get_canvas_summary` to see the template's text elements, their ids and fonts. The list shortens long text: before rewriting a paragraph, call it again with `element_ids` for the full text and every style. It lists 150 elements per call; when `has_more`, call it again with `next_offset`.
 - `update_elements` with new `text` for each, in one call. Keep each text about as long as the original so the layout holds; shorten headlines rather than shrinking fonts. Text boxes refit their text.
 - Restyle in place with the same ids: `font_family` (any family `search_fonts` lists), `font_weight` or `bold`, `align`, `letter_spacing`, `line_height`, `uppercase`, `color` on text and `fill` on shapes, `corner_radius`, `opacity` on photos.
 - If the result lists fields under "Ignored", those did not change: tell the user rather than claiming them.
 - Remove parts that don't apply with `remove_elements`; add missing details (date, address, price) as `type: "text"` matching the nearby font and color.
+- Need another price tag, card or row like one already there? `duplicate_elements` copies it (with its group and the arrows between copied pieces), then retext the copy.
+- Swap a template photo for the user's own: `update_elements` with `image_url` (a public PNG, JPEG or WebP link) on the photo's id. The photo keeps its box; if the result says it was stretched, set the given height or ask which crop they want. Add a new picture with `add_elements` `type: "image"`.
+- Rename the project or change the page size with `update_canvas`. Resizing moves nothing; move elements that the result says now reach past the page.
 
 ## 4. Check and deliver
 - `get_canvas_summary` again; nudge anything that collides with `update_elements` (`dx`, `dy`) or `arrange`.
 - `export_png` (`scale: 2`) for a ready image.
 - Users can open the layers panel to ungroup a template and edit one piece by hand; read the board again before your next change.
-- Photos in templates are part of the design; to swap in the user's own photos they can open the board in the full editor through `open_url`.
+- If the user has a photo file but no link, they can upload it in the board view (Add image) or in the full editor through `open_url`.
