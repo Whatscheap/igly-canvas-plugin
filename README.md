@@ -6,7 +6,7 @@ The board shows up right in the chat. Move, retype and draw on it by hand, expor
 
 ## What's inside
 
-- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, OAuth sign-in with your Igly account) with tools to browse the Igly library (design templates, video templates and animations in one picker in the chat, with categories), fill in and render a video template to an MP4, get an animation prompt, list your Igly projects, create a canvas (saved as a project in your account), apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines), arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
+- **MCP server** `https://igly.ai/api/mcp` (Streamable HTTP, OAuth sign-in with your Igly account) with tools to browse the Igly library (design templates, video templates and animations in one picker in the chat, with categories), fill in and render a video template to an MP4, get an animation prompt, list your Igly projects, create a canvas (saved as a project in your account), apply a template beside an existing board, add / update / remove elements (including dashed outlines and curved lines; every style you can set on a new element can be changed later, fonts included), search the font list, arrange and export PNG. Configured in `.mcp.json` (Claude) and `mcp.json` (portable / OpenAI).
 - **Skills** in `skills/`:
 
 | Skill | Use it for |

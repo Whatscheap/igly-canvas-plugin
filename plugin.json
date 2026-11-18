@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Pick from 5,000+ design templates, 1,100+ animations and video templates that render to an MP4, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
@@ -74,6 +74,12 @@
               "prompt": "Use an Igly Canvas template to make an Instagram post for our bakery Crumb and Co announcing a summer menu with lemon tarts.",
               "tools_triggered": "list_templates, create_canvas, get_canvas_summary, update_elements",
               "expected_behavior": "A copy of a designed template with the headline, brand name and copy rewritten. The board view shows the post."
+            },
+            {
+              "description": "Change the font of an element that is already on the board",
+              "prompt": "On that Igly Canvas board, change the headline font to Playfair Display, make it bold, and set the body text in Inter.",
+              "tools_triggered": "get_canvas_summary, update_elements",
+              "expected_behavior": "The headline and body text change font in place (no new elements); the text boxes refit the new font. The board view shows the new fonts, and get_canvas_summary lists font=\"Playfair Display\" and font=\"Inter\" for those ids."
             },
             {
               "description": "Draw a flowchart",

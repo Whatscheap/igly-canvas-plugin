@@ -18,7 +18,7 @@ From the brief, decide: 3 to 5 keywords (e.g. "calm, earthy, premium"), a 5-colo
 - Type specimen at y = 300: heading sample (`font_size: 72`, `font_family` = heading font) and body sample (`font_size: 20`, `width: 560`).
 - Concept tiles to the right (x >= 1100): sticky notes or rounded rectangles 300 x 220 describing imagery, textures and references in words.
 - Layout grid (if asked): a frame rectangle and thin `type: "line"` column guides (`stroke: "#ADB5BD"`, `stroke_width: 1`).
-- `font_family` accepts most Google Fonts by exact name (e.g. "Playfair Display", "DM Sans", "Space Grotesk", "Fraunces", "Caveat") plus the default hand-drawn "Bryndan Write". Pair one display face with one plain sans.
+- `font_family` takes any family from Igly's font list, the same list as the Igly editor (e.g. "Playfair Display", "DM Sans", "Space Grotesk", "Fraunces", "Caveat"; the hand-drawn default is "Kalam"). `search_fonts` finds them; an unknown name fails with close matches. Pair one display face with one plain sans.
 
 ## 4. Variants and finish
 - For 2 or 3 directions, repeat the block side by side (x offset 1800) with its own title so the user can compare.

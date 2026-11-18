@@ -19,9 +19,10 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - Board already open: `apply_template` with `canvas_id` and `template_id`. The template lands to the right of the existing content as a new page, so nothing is covered.
 
 ## 3. Rewrite the copy
-- `get_canvas_summary` to see the template's text elements and their ids.
-- `update_elements` with new `text` for each, in one call. Keep each text about as long as the original so the layout holds; shorten headlines rather than shrinking fonts.
-- Recolor to the user's brand with `fill` on shapes and `color` on text, using the same ids.
+- `get_canvas_summary` to see the template's text elements, their ids and fonts. The list shortens long text: before rewriting a paragraph, call it again with `element_ids` for the full text and every style.
+- `update_elements` with new `text` for each, in one call. Keep each text about as long as the original so the layout holds; shorten headlines rather than shrinking fonts. Text boxes refit their text.
+- Restyle in place with the same ids: `font_family` (any family `search_fonts` lists), `font_weight` or `bold`, `align`, `letter_spacing`, `line_height`, `uppercase`, `color` on text and `fill` on shapes, `corner_radius`, `opacity` on photos.
+- If the result lists fields under "Ignored", those did not change: tell the user rather than claiming them.
 - Remove parts that don't apply with `remove_elements`; add missing details (date, address, price) as `type: "text"` matching the nearby font and color.
 
 ## 4. Check and deliver
