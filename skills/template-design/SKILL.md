@@ -25,11 +25,11 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - If the result lists fields under "Ignored", those did not change: tell the user rather than claiming them.
 - Remove parts that don't apply with `remove_elements`; add missing details (date, address, price) as `type: "text"` matching the nearby font and color.
 - Need another price tag, card or row like one already there? `duplicate_elements` copies it (with its group and the arrows between copied pieces), then retext the copy.
-- Swap a template photo for the user's own: `update_elements` with `image_url` (a public PNG, JPEG or WebP link) on the photo's id. The photo keeps its box; if the result says it was stretched, set the given height or ask which crop they want. Add a new picture with `add_elements` `type: "image"`.
+- Swap a template photo for the user's own: `update_elements` on the photo's id with `image_url` (a public PNG, JPEG or WebP link), or, for a photo the user attached in the chat, pass the file in `attached_images` and set `attached_image: 0` (its position) on the update. Never pass a local path like `/mnt/data/...` as `image_url`. The photo keeps its box; if the result says it was stretched, set the given height or ask which crop they want. Add a new picture with `add_elements` `type: "image"` the same two ways.
 - Rename the project or change the page size with `update_canvas`. Resizing moves nothing; move elements that the result says now reach past the page.
 
 ## 4. Check and deliver
 - `get_canvas_summary` again; nudge anything that collides with `update_elements` (`dx`, `dy`) or `arrange`.
 - `export_png` (`scale: 2`) for a ready image.
 - Users can open the layers panel to ungroup a template and edit one piece by hand; read the board again before your next change.
-- If the user has a photo file but no link, they can upload it in the board view (Add image) or in the full editor through `open_url`.
+- If your app cannot pass the attached file (the tool says so), ask the user to add it with Add image in the board view or in the full editor through `open_url`, or to share a public link.

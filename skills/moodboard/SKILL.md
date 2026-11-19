@@ -23,5 +23,5 @@ From the brief, decide: 3 to 5 keywords (e.g. "calm, earthy, premium"), a 5-colo
 ## 4. Variants and finish
 - For 2 or 3 directions, repeat the block side by side (x offset 1800) with its own title so the user can compare.
 - `get_canvas_summary` to check, `arrange` to tidy, `export_png` to share.
-- Real photos or brand assets with a public link: `add_elements` `type: "image"` with `image_url` (PNG, JPEG or WebP); give a `width` and the height keeps the picture's shape. Files without a link: Add image in the board view, or the full editor through `open_url`. Igly Canvas does not generate images.
+- Real photos or brand assets: `add_elements` `type: "image"` with `image_url` (a public PNG, JPEG or WebP link), or, for images the user attached in the chat, the files in `attached_images` and `attached_image: <position>` on each image element; give a `width` and the height keeps the picture's shape. If your app cannot pass attachments, the user adds them with Add image in the board view or in the full editor through `open_url`. Igly Canvas does not generate images.
 - `duplicate_elements` repeats a tile or a palette swatch; `update_canvas` renames the board.
