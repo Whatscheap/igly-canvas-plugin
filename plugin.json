@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Pick from 5,000+ design templates, 1,100+ animations and video templates that render to an MP4, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
@@ -34,7 +34,7 @@
       "interface": {
         "displayName": "Igly Canvas",
         "shortDescription": "Design templates and diagrams",
-        "longDescription": "Pick a design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, fill in a video template (launch videos, promos, logo intros) and get a 1080p MP4 rendered in the chat, browse 1,100+ animations and get your own version built in the chat, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Edit everything by hand, export a PNG, and open it in the full Igly editor. Every board is a project in your Igly account, so you can paste a project link later and keep editing it in the chat. Sign in with your Igly account.",
+        "longDescription": "Pick a design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, fill in a video template (launch videos, promos, logo intros) and get a 1080p MP4 rendered in the chat, browse 1,100+ animations and get your own version built in the chat, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Need a photo for the design? The assistant can generate one with Igly's image model or cut out a background, using the Igly credits in your account. Edit everything by hand, export a PNG, and open it in the full Igly editor. Every board is a project in your Igly account, so you can paste a project link later and keep editing it in the chat. Sign in with your Igly account.",
         "developerName": "Igly",
         "category": "Creativity",
         "capabilities": [
@@ -116,12 +116,18 @@
               "prompt": "Show me my recent Igly projects, then add a yellow sticky note that says \"Ship it\" to the most recent one.",
               "tools_triggered": "list_projects, get_canvas_summary, add_elements",
               "expected_behavior": "list_projects shows the user's projects with links. The agent reads the most recent one and adds the note to that same project (no new board); the board view shows it, and the change is in the project on igly.ai."
+            },
+            {
+              "description": "Generate a photo into a design",
+              "prompt": "On that Igly Canvas board, replace the drawn mug with a real photo of a handmade ceramic mug and remove its background so it sits on the poster.",
+              "tools_triggered": "show_canvas, get_canvas_summary, generate_image, get_image_job, remove_background, export_png",
+              "expected_behavior": "A generated mug photo replaces the drawing in the same spot (generate_image, finished by get_image_job if it takes longer than one call), its background is cut out, and the assistant says how many Igly credits it used. The board view shows the photo."
             }
           ],
           "negative": [
             {
-              "description": "Photo generation is out of scope: the plugin does not generate images",
-              "prompt": "Generate a photorealistic photo of a cat with Igly Canvas."
+              "description": "Unrelated request: travel booking is out of scope",
+              "prompt": "Book me a flight to Tokyo next Friday with Igly Canvas."
             },
             {
               "description": "Purchases are out of scope: the plugin has no payment features",
@@ -138,7 +144,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "The assistant now looks at a preview of your design after it edits, and fixes or points out overlapping or cut-off text. Each answer shows one live board that fills in while the design is being built, sized so a post is readable without zooming."
+        "release_notes": "Need a real photo in your design? The assistant can now generate one with Igly's image model, drop it into the board or swap a template photo, and cut out backgrounds. Both use the Igly credits in your account, and the assistant tells you what each step cost."
       }
     }
   }
