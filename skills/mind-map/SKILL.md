@@ -25,3 +25,5 @@ description: Draw a mind map, brainstorm, topic cluster or idea map on an editab
 - `get_canvas_summary`; move overlapping leaves outward with `update_elements` (`dx`, `dy`).
 - Offer to add more leaves to one branch, regroup branches, or export a PNG (`export_png`).
 - Mention the board is editable in the chat and opens in the full editor via `open_url`.
+
+- Check your work: when you finish building or editing, call `export_png` once and look at the preview image it returns; fix overlapping or cut-off text before you answer. In a later reply that only edits the board, call `show_canvas` once first so the user sees it change.

@@ -38,6 +38,7 @@ Draw the whole chart in one `add_elements` call, then check and fix it.
 - `get_canvas_summary` and look for overlaps; fix with `update_elements` (`dx`/`dy`) or `arrange` (`align_middle`, `distribute_horizontal`).
 - Tell the user they can edit the board directly and open it in the full editor with the canvas `open_url`.
 - If they want an image, call `export_png`.
+- Check your work: when you finish building or editing, call `export_png` once and look at the preview image it returns; fix overlapping or cut-off text before you answer. In a later reply that only edits the board, call `show_canvas` once first so the user sees it change.
 
 ## Example (one call)
 ```json

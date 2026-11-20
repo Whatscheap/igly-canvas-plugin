@@ -25,3 +25,5 @@ Frames are sketch boxes with scene descriptions, not finished pictures. Draw sim
 ## 4. Check
 - `get_canvas_summary`; fix spacing with `arrange` (`align_top`, `distribute_horizontal` with `gap: 60`).
 - Offer to reorder scenes (swap positions with `update_elements`), tighten copy to the target length, or `export_png` for sharing.
+
+- Check your work: when you finish building or editing, call `export_png` once and look at the preview image it returns; fix overlapping or cut-off text before you answer. In a later reply that only edits the board, call `show_canvas` once first so the user sees it change.

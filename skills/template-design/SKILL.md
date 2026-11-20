@@ -17,6 +17,7 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 ## 2. Create from the template
 - New board: `create_canvas` with `template_id` and a `title`. Keep `canvas_id`. To continue an existing Igly project instead, pass its link or id as `canvas_id` (`list_projects` finds it).
 - Board already open: `apply_template` with `canvas_id` and `template_id`. The template lands to the right of the existing content as a new page, so nothing is covered.
+- `create_canvas` and `apply_template` show the user one live board that follows every later edit. In a later reply that only edits the project, call `show_canvas` once before the first edit.
 
 ## 3. Rewrite the copy
 - `get_canvas_summary` to see the template's text elements, their ids and fonts. The list shortens long text: before rewriting a paragraph, call it again with `element_ids` for the full text and every style. It lists 150 elements per call; when `has_more`, call it again with `next_offset`.
@@ -29,7 +30,7 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - Rename the project or change the page size with `update_canvas`. Resizing moves nothing; move elements that the result says now reach past the page.
 
 ## 4. Check and deliver
-- `get_canvas_summary` again; nudge anything that collides with `update_elements` (`dx`, `dy`) or `arrange`.
-- `export_png` (`scale: 2`) for a ready image.
+- When the edits are done, call `export_png` once and look at the preview image it returns (and its layout check). Fix what your edits broke, such as overlapping or cut-off text, with `update_elements` (`dx`, `dy`) or `arrange`, then export again. Point out anything else that looks wrong and offer to fix it.
+- Tell the user in a sentence what the design looks like, with the PNG link from `export_png`.
 - Users can open the layers panel to ungroup a template and edit one piece by hand; read the board again before your next change.
 - If your app cannot pass the attached file (the tool says so), ask the user to add it with Add image in the board view or in the full editor through `open_url`, or to share a public link.

@@ -27,3 +27,5 @@ Low fidelity: grey boxes, real labels, no images. Use the clean font so it reads
 ## 4. Check
 - `get_canvas_summary`; align columns with `arrange` (`align_left`, `distribute_vertical` with `gap`).
 - Offer a second variant beside the first (x + frame width + 200) for comparison, or `export_png`.
+
+- Check your work: when you finish building or editing, call `export_png` once and look at the preview image it returns; fix overlapping or cut-off text before you answer. In a later reply that only edits the board, call `show_canvas` once first so the user sees it change.

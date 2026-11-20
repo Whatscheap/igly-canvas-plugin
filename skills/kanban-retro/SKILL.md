@@ -27,3 +27,5 @@ description: Build a kanban board, retrospective wall, affinity map, SWOT, pros 
 - Re-pack a column: `arrange` with `distribute_vertical` and `gap: 30`.
 - Summaries: read the board with `get_canvas_summary` before summarising or proposing actions.
 - The board is editable in the chat; the user can drag notes too. Offer `export_png` or the `open_url`.
+
+- Check your work: when you finish building or editing, call `export_png` once and look at the preview image it returns; fix overlapping or cut-off text before you answer. In a later reply that only edits the board, call `show_canvas` once first so the user sees it change.

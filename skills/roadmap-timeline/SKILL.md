@@ -27,3 +27,5 @@ description: Draw a roadmap, timeline, release plan, project schedule, quarterly
 ## 4. Check
 - `get_canvas_summary`, then `arrange` with `align_top` per row or `distribute_horizontal` per lane if spacing drifted.
 - Offer edits: move an item to another quarter (`update_elements` with `dx: 320`), add a lane, export a PNG.
+
+- Check your work: when you finish building or editing, call `export_png` once and look at the preview image it returns; fix overlapping or cut-off text before you answer. In a later reply that only edits the board, call `show_canvas` once first so the user sees it change.

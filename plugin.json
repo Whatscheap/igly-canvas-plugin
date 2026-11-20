@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "Pick from 5,000+ design templates, 1,100+ animations and video templates that render to an MP4, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
@@ -72,19 +72,19 @@
             {
               "description": "Rewrite a template for a brand",
               "prompt": "Use an Igly Canvas template to make an Instagram post for our bakery Crumb and Co announcing a summer menu with lemon tarts.",
-              "tools_triggered": "list_templates, create_canvas, get_canvas_summary, update_elements",
-              "expected_behavior": "A copy of a designed template with the headline, brand name and copy rewritten. The board view shows the post."
+              "tools_triggered": "list_templates, create_canvas, get_canvas_summary, update_elements, export_png",
+              "expected_behavior": "A copy of a designed template with the headline, brand name and copy rewritten. One board view shows the post and fills in as it is edited; the assistant checks the exported preview and describes the result."
             },
             {
               "description": "Change the font of an element that is already on the board",
               "prompt": "On that Igly Canvas board, change the headline font to Playfair Display, make it bold, and set the body text in Inter.",
-              "tools_triggered": "get_canvas_summary, update_elements",
+              "tools_triggered": "show_canvas, get_canvas_summary, update_elements, export_png",
               "expected_behavior": "The headline and body text change font in place (no new elements); the text boxes refit the new font. The board view shows the new fonts, and get_canvas_summary lists font=\"Playfair Display\" and font=\"Inter\" for those ids."
             },
             {
               "description": "Swap a template photo, duplicate an element and rename the project",
               "prompt": "On that Igly Canvas board, replace the main photo with https://img.igly.ai/cms-media/repo-media/apps/web/public/images/marketing/canvas-agent/coffee-ugc-vertical.webp, duplicate the headline so I have a second line below it, and rename the project to Crumb and Co summer menu.",
-              "tools_triggered": "get_canvas_summary, update_elements, duplicate_elements, update_canvas",
+              "tools_triggered": "show_canvas, get_canvas_summary, update_elements, duplicate_elements, update_canvas, export_png",
               "expected_behavior": "The template's photo shows the coffee picture in the same box, a copy of the headline appears below the original (duplicate_elements with a dy), and the project is renamed. get_canvas_summary shows the new title and the copy's id; nothing else on the board moved."
             },
             {
@@ -102,7 +102,7 @@
             {
               "description": "Arrange a board and export it",
               "prompt": "On that Igly Canvas board, align the step boxes, space them evenly, then export a PNG.",
-              "tools_triggered": "arrange, export_png",
+              "tools_triggered": "show_canvas, arrange, export_png",
               "expected_behavior": "Boxes aligned and evenly spaced, with connected arrows following. A PNG link of the board is returned."
             },
             {
@@ -138,7 +138,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "New app icon on a white background, so it stays clear in dark mode."
+        "release_notes": "The assistant now looks at a preview of your design after it edits, and fixes or points out overlapping or cut-off text. Each answer shows one live board that fills in while the design is being built, sized so a post is readable without zooming."
       }
     }
   }

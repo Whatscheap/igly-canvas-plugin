@@ -25,3 +25,5 @@ From the brief, decide: 3 to 5 keywords (e.g. "calm, earthy, premium"), a 5-colo
 - `get_canvas_summary` to check, `arrange` to tidy, `export_png` to share.
 - Real photos or brand assets: `add_elements` `type: "image"` with `image_url` (a public PNG, JPEG or WebP link), or, for images the user attached in the chat, the files in `attached_images` and `attached_image: <position>` on each image element; give a `width` and the height keeps the picture's shape. If your app cannot pass attachments, the user adds them with Add image in the board view or in the full editor through `open_url`. Igly Canvas does not generate images.
 - `duplicate_elements` repeats a tile or a palette swatch; `update_canvas` renames the board.
+
+- Check your work: when you finish building or editing, call `export_png` once and look at the preview image it returns; fix overlapping or cut-off text before you answer. In a later reply that only edits the board, call `show_canvas` once first so the user sees it change.
