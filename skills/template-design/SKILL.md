@@ -20,6 +20,7 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - `create_canvas` and `apply_template` show the user one live board that follows every later edit. In a later reply that only edits the project, call `show_canvas` once before the first edit.
 
 ## 3. Rewrite the copy
+- The user says "my brand", "on brand", "brand colors" or names their own shop: call `get_brand_kit` first and use exactly its colors, `font_family` values and logo links (place a logo with `add_elements` `type: "image"`). A brand font the canvas lacks comes with close matches: use one and say so. No kit: say so, never invent a palette and call it theirs; offer `import_brand_kit_from_website` with their site.
 - `get_canvas_summary` to see the template's text elements, their ids and fonts. The list shortens long text: before rewriting a paragraph, call it again with `element_ids` for the full text and every style. It lists 150 elements per call; when `has_more`, call it again with `next_offset`.
 - `update_elements` with new `text` for each, in one call. Keep each text about as long as the original so the layout holds; shorten headlines rather than shrinking fonts. Text boxes refit their text.
 - Restyle in place with the same ids: `font_family` (any family `search_fonts` lists), `font_weight` or `bold`, `align`, `letter_spacing`, `line_height`, `uppercase`, `color` on text and `fill` on shapes, `corner_radius`, `opacity` on photos.
