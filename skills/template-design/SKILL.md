@@ -37,4 +37,4 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - Tell the user in a sentence what the design looks like, with the PNG link from `export_png`.
 - Asked for a PDF, a JPG, or each design of a set as its own file: `export_png` with `format` (`pdf`, `jpg`) and `frames`, one frame per design by its `element_ids` or its page `region`. A PDF gets one page per frame. Keep the file in Igly; don't rebuild it with another app.
 - Users can open the layers panel to ungroup a template and edit one piece by hand; read the board again before your next change.
-- If your app cannot pass the attached file (the tool says so), ask the user to add it with Add image in the board view or in the full editor through `open_url`, or to share a public link.
+- If your app cannot pass the attached file (the tool says so), add an `image_slot` (`add_elements` type `image_slot`) with the box the photo should fill, and tell the user to drop their photo on it in the board (or select it and click Choose photo). It becomes an image with the slot's id, so you can keep editing it or remove its background.
