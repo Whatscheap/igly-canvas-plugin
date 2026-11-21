@@ -20,5 +20,5 @@ Igly's video templates are finished motion designs with text, color and image sl
 
 ## 3. Render
 - `render_video_template` with `template_id` and `fields`. The board view shows progress, then the MP4 with a Download button.
-- `get_video_render` with the `render_id` returns the status and, when done, the MP4 link to share.
+- `get_video_render` with the `render_id` returns the status and, when done, the MP4 link to share. A render takes about 30-60 s: call it again every 10-15 s until it is completed, then answer with the link.
 - For a different text, render again: every render is a new video.
