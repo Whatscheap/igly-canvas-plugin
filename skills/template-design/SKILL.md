@@ -34,5 +34,6 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 ## 4. Check and deliver
 - When the edits are done, call `export_png` once and look at the preview image it returns (and its layout check). Fix what your edits broke, such as overlapping or cut-off text, with `update_elements` (`dx`, `dy`) or `arrange`, then export again. Point out anything else that looks wrong and offer to fix it.
 - Tell the user in a sentence what the design looks like, with the PNG link from `export_png`.
+- Asked for a PDF, a JPG, or each design of a set as its own file: `export_png` with `format` (`pdf`, `jpg`) and `frames`, one frame per design by its `element_ids` or its page `region`. A PDF gets one page per frame. Keep the file in Igly; don't rebuild it with another app.
 - Users can open the layers panel to ungroup a template and edit one piece by hand; read the board again before your next change.
 - If your app cannot pass the attached file (the tool says so), ask the user to add it with Add image in the board view or in the full editor through `open_url`, or to share a public link.
