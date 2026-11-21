@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "igly-canvas",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Pick from 5,000+ design templates, 1,100+ animations and video templates that render to an MP4, or draw flowcharts, mind maps, roadmaps, wireframes, storyboards and moodboards on an editable Igly canvas, right in the chat.",
   "author": {
     "name": "Igly",
@@ -34,7 +34,7 @@
       "interface": {
         "displayName": "Igly Canvas",
         "shortDescription": "Design templates and diagrams",
-        "longDescription": "Pick a design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, fill in a video template (launch videos, promos, logo intros, vertical Reels and TikToks) and get an MP4 rendered in the chat, browse 1,100+ animations and get your own version built in the chat, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Need a photo for the design? The assistant can generate one with Igly's image model or cut out a background, using the Igly credits in your account. Ask for it in your brand and the assistant uses the colors, fonts and logo of your Igly brand kit. Edit everything by hand, export a PNG, JPG or PDF (one file or page per design), and open it in the full Igly editor. Every board is a project in your Igly account, so you can paste a project link later and keep editing it in the chat. Sign in with your Igly account.",
+        "longDescription": "Pick a design template (menus, posters, social posts, invitations, thumbnails) from a picker right in the chat and have it rewritten for your brand, fill in a video template (launch videos, promos, logo intros, vertical Reels and TikToks) and get an MP4 rendered in the chat, browse 1,100+ animations and get your own version built in the chat, or ask for a flowchart, mind map, roadmap, wireframe, storyboard or moodboard. Need a photo for the design? The assistant can generate one with Igly's image model or cut out a background, using the Igly credits in your account. Ask for it in your brand and the assistant uses the colors, fonts and logo of your Igly brand kit. Turn a post into a Story, a cover or another size in one step, or lay out a deck page by page, all on one board. Got a flat poster? Split it into editable layers and change its text. Edit everything by hand, export a PNG, JPG or PDF (one file or page per design), and open it in the full Igly editor. Every board is a project in your Igly account, so you can paste a project link later and keep editing it in the chat. Sign in with your Igly account.",
         "developerName": "Igly",
         "category": "Creativity",
         "capabilities": [
