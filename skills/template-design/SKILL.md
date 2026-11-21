@@ -32,6 +32,9 @@ Igly has 2,400+ free, designed, editable templates. Start from one instead of dr
 - No photo from the user and the design needs one (a product shot, a scene)? `generate_image` with a specific prompt and `replace_id` set to the template photo's id (or `x`/`y`/`width` for a new picture), instead of linking a picture from the web. If it says the image is still being generated, call `get_image_job` with the same placement. `remove_background` cuts out an image element's subject so it sits on the design. Both spend the user's Igly credits: tell them what each step cost.
 - Rename the project or change the page size with `update_canvas`. Resizing moves nothing; move elements that the result says now reach past the page.
 
+## Making a flat picture editable
+- "Make this poster editable", or change the text on a flat picture: place it with `add_elements` `type: "image"`, then call `split_image_layers` on it. When the result says it is still working, call it again with the `job_id`. The picture becomes the background, each object as its own cut-out, and text layers you change with `update_elements`. Never paint boxes over the old text. It spends the user's Igly credits; tell them what it cost.
+
 ## 4. Check and deliver
 - When the edits are done, call `export_png` once and look at the preview image it returns (and its layout check). Fix what your edits broke, such as overlapping or cut-off text, with `update_elements` (`dx`, `dy`) or `arrange`, then export again. Point out anything else that looks wrong and offer to fix it.
 - Tell the user in a sentence what the design looks like, with the PNG link from `export_png`.
